@@ -2,6 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Profile from "./pages/Profile"
 
 function App() {
   return (
@@ -50,6 +57,16 @@ function App() {
             React Redux
           </a>
         </span>
+
+        <Router>
+          <Link to="/profile">profile</Link>
+          <Switch>
+          <Route path="/profile" exact>
+            <Profile />
+          </Route>
+          </Switch>
+        </Router>
+        
       </header>
     </div>
   );
