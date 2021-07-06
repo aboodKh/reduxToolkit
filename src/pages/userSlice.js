@@ -21,6 +21,8 @@ export const fetchUserThunkCreator= createAsyncThunk("user",async(id,thunkAPI)=>
      }
 })
 
+console.log(fetchUserThunkCreator.pending);
+
 export const userSlice= createSlice({
     name:"user",
     initialState: initialState,
